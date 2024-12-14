@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заметка</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center; /* Центрирование по горизонтали */
+            align-items: center; /* Центрирование по вертикали */
+            height: 100vh; /* Высота на весь экран */
+            margin: 0;
+            background-color: #f4f4f4; /* Цвет фона */
+            font-family: Arial, sans-serif; /* Шрифт */
+        }
+        .note-container {
+            background: white; /* Цвет фона контейнера */
+            padding: 20px; /* Отступы внутри контейнера */
+            border-radius: 8px; /* Скругление углов */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень */
+            text-align: center; /* Центрирование текста */
+        }
+        h1 {
+            color: #333; /* Цвет заголовка */
+        }
+        p {
+            color: #555; /* Цвет текста */
+            font-size: 18px; /* Размер шрифта */
+        }
+    </style>
+</head>
+<body>
+
+<div class="note-container">
+    <h1>Заметка</h1>
+    <p><strong>Текст заметки:</strong> {{ note_text }}</p>
+    <p><strong>ID заметки:</strong> {{ note_id }}</p>
+    <p><strong>Секретная фраза:</strong> {{ secret_phrase }}</p>
+</div>
+
+</body>
+</html>

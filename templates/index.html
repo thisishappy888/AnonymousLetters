@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Записки</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 400px;
+            text-align: left;
+        }
+
+        .card h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .card input {
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .card button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .card button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Записки</h1>
+
+<div class="card">
+    <h2>Введите текст записки и секретную фразу</h2>
+    <form action="/add_note" method="post">
+        <input type="text" name="secret_phrase" placeholder="Введите секретную фразу" required>
+        <input type="text" name="note_text" placeholder="Введите текст записки" required>
+        <button type="submit">ОТПРАВИТЬ</button>
+    </form>
+</div>
+
+<div class="card">
+    <h2>Введите ID записки и секретную фразу</h2>
+    <form action="/get_note" method="post">
+        <input type="text" name="note_id" placeholder="Введите ID записки" required>
+        <input type="text" name="secret_phrase" placeholder="Введите секретную фразу" required>
+        <button type="submit">ПОЛУЧИТЬ</button>
+    </form>
+</div>
+
+</body>
+</html>
