@@ -1,0 +1,1 @@
+FastAPI, uvicorn, hashlib
